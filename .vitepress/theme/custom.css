@@ -1,0 +1,79 @@
+/* Couleurs des courbes : lisibles en clair comme en sombre */
+:root {
+  --courbe-1: #2563eb;
+  --courbe-2: #dc2626;
+  --courbe-3: #059669;
+  --courbe-4: #9333ea;
+  --courbe-aire: rgba(37, 99, 235, 0.18);
+}
+
+.dark {
+  --courbe-1: #60a5fa;
+  --courbe-2: #f87171;
+  --courbe-3: #34d399;
+  --courbe-4: #c084fc;
+  --courbe-aire: rgba(96, 165, 250, 0.22);
+}
+
+/* Les encadres de formules (::: tip) : un peu plus d'air autour des equations */
+.custom-block.tip mjx-container[display='true'] {
+  margin: 0.6em 0;
+}
+
+/* Les equations longues defilent au lieu de deborder sur mobile */
+mjx-container[display='true'] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 6px 0;
+}
+
+/* Plusieurs formules d'un meme bloc : cote a cote si la place le permet, empilees sinon */
+.formules-groupe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5em;
+  margin: 0.6em 0;
+}
+
+.formules-groupe mjx-container[display='true'] {
+  margin: 0.2em 0 !important;
+}
+
+/* Les fractions en ligne sont plus hautes que le texte : on aere les paragraphes */
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.95;
+}
+
+/* Badges de niveau places dans les titres */
+.vp-doc h3 .VPBadge,
+.vp-doc h2 .VPBadge {
+  vertical-align: middle;
+  font-size: 11px;
+}
+
+/* Figures SVG inline : centrees, adaptees a la largeur */
+.figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.figure svg {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  color: var(--vp-c-text-1);
+}
+
+.figure figcaption,
+.figure .legende {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  margin-top: 4px;
+  text-align: center;
+}
